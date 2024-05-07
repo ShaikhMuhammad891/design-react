@@ -186,7 +186,7 @@ const Services = () => {
         {data.map((element, index) => (
           <SwiperSlide
             key={index}
-            className={` border  bg-[#FAFAFA] lg:max-w-[330px] md:min-w-[233px] min-w-[200px] w-full lg:pl-[16px] md:pl-[12px] lg:py-[20px] md:py-[20px] sm:py-[15px] sm:pl-[10px] py-2 px-2 ${
+            className={` border mb:mb-[50px] bg-[#FAFAFA] lg:max-w-[330px] md:min-w-[233px] min-w-[300px] w-full lg:pl-[16px] md:pl-[12px] lg:py-[20px] md:py-[20px] sm:py-[15px] sm:pl-[10px] py-2 px-2 ${
               activeIndex === index
                 ? " border border-rose-500 rounded-[7px] active-slide scale-110 mt-[50px] bg-gradient-to-br transform"
                 : " bg-[#FAFAFA] opacity-75"
@@ -232,12 +232,7 @@ const data = [
     description:
       "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
   },
-  {
-    title: "Web Design & Development",
-    img: "/images/web-logo.png",
-    description:
-      "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
-  },
+
   {
     title: "Mobile App Development",
     img: "/images/mobile-logo.png",
@@ -247,6 +242,24 @@ const data = [
   {
     title: "Mobile App Development",
     img: "/images/mobile-logo.png",
+    description:
+      "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
+  },
+  {
+    title: "Software Testing Service",
+    img: "/images/dashboard.png",
+    description:
+      "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
+  },
+  {
+    title: "Software Testing Service",
+    img: "/images/dashboard.png",
+    description:
+      "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
+  },
+  {
+    title: "Software Testing Service",
+    img: "/images/dashboard.png",
     description:
       "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
   },

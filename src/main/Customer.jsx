@@ -139,7 +139,7 @@ const Customer = () => {
                         key={index}
                         src={e.rating}
                         alt=""
-                        className=" md:w-[20px] md:h-[20px] sm:w-[15px] sm:h-[15px] max-w-[20px] max-h-[20px]"
+                        className=" md:w-[20px] md:h-[20px] sm:w-[15px] sm:h-[15px] max-w-[20px] max-h-[20px] mb:w-[15px] mb:h-[]"
                       />
                     ))}
                   </div>
