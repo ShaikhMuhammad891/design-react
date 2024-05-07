@@ -10,13 +10,15 @@ import TechStack from "./TechStack";
 import Alcline from "./Alcaline";
 import Resources from "./Resources";
 import Footer from "./Footer";
-import SimplePagination from "./SimplePagination";
+// import SimplePagination from "./SimplePagination";
+import Test from "./Test";
 
 const LandingPage = () => {
   return (
     <>
       <TopFront />
       <Services />
+      {/* <Test /> */}
       <Trust />
       <Customer />
       <CaseStudies />

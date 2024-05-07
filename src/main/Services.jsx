@@ -132,8 +132,15 @@ import "../index.css";
 import { Pagination } from "swiper/modules";
 const Services = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [progressBar, seProgressBar] = useState(activeIndex + 1);
+  const [numberIncrease, setNumberIncrease] = useState(1);
+  const [numberDecrease, setNumberDecrease] = useState(data.length);
 
   const handleSlideChange = (swiper) => {
+    console.log("active index is: " + activeIndex);
+    setNumberIncrease(activeIndex);
+    console.log("number" + numberIncrease);
+    setNumberDecrease(numberDecrease);
     setActiveIndex(swiper.realIndex);
   };
 
@@ -219,6 +226,14 @@ const Services = () => {
       <div className="pagination-area flex items-center">
         <div className="swiper-pagination mb-7"></div>
       </div>
+
+      <div className=" flex justify-end mr-24">
+        <p>{numberIncrease}</p>
+        <div className="progressBar  max-w-[200px] h-[10px] w-full bg-gray-300 rounded-xl">
+          <div className="progressBarMover bg-black "></div>
+        </div>
+        <p>{numberDecrease}</p>
+      </div>
     </div>
   );
 };
@@ -227,7 +242,7 @@ export default Services;
 
 const data = [
   {
-    title: "Mobile App Development",
+    title: "I am First",
     img: "/images/mobile-logo.png",
     description:
       "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
@@ -242,18 +257,6 @@ const data = [
   {
     title: "Mobile App Development",
     img: "/images/mobile-logo.png",
-    description:
-      "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
-  },
-  {
-    title: "Software Testing Service",
-    img: "/images/dashboard.png",
-    description:
-      "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
-  },
-  {
-    title: "Software Testing Service",
-    img: "/images/dashboard.png",
     description:
       "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
   },
