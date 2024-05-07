@@ -113,3 +113,10 @@ button:focus-visible {
   /* border: 1px solid; */
   border-color: linear-gradient(225deg, #f76680 0%, #57007b 100%);
 }
+
+.border-color {
+  border: 1px solid blue;
+  border-image: linear-gradient(225deg, #f76680 0%, #57007b 100%);
+  border-image-slice: 1;
+  border-radius: 9999px;
+}

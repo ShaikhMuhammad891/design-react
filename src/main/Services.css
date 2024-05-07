@@ -27,3 +27,9 @@
 .swiper-pagination {
   color: aqua;
 }
+
+/* border-color {
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  border-image: linear-gradient(225deg, #f76680 0%, #57007b 100%);
+} */

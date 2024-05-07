@@ -144,11 +144,37 @@ const Services = () => {
       </p>
       <Swiper
         onSlideChange={handleSlideChange}
-        slidesPerView={4}
-        spaceBetween={40}
+        // slidesPerView={4}
+        // spaceBetween={40}
         grabCursor={true}
         centeredSlides={true}
         loop={true}
+        breakpoints={{
+          375: {
+            slidesPerView: 1,
+            spaceBetween: 5,
+          },
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 5,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          1280: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+        }}
         pagination={{
           el: ".swiper-pagination",
           clickable: true,
@@ -158,20 +184,20 @@ const Services = () => {
         className="mySwiper max-w-[1440px] w-full h-auto"
       >
         {data.map((element, index) => (
-          <SwiperSlide key={index}>
-            <div
-              key={index}
-              className={` border lg:max-w-[330px] md:min-w-[233px] min-w-[200px] w-full rounded-[7px] lg:pl-[16px] md:pl-[12px] lg:py-[20px] md:py-[20px] sm:py-[15px] sm:pl-[10px] py-2 px-2 ${
-                activeIndex === index
-                  ? "active-slide scale-110 mt-[50px] bg-gradient-to-br transform"
-                  : " opacity-75"
-              }`}
-            >
+          <SwiperSlide
+            key={index}
+            className={` border  bg-[#FAFAFA] lg:max-w-[330px] md:min-w-[233px] min-w-[200px] w-full lg:pl-[16px] md:pl-[12px] lg:py-[20px] md:py-[20px] sm:py-[15px] sm:pl-[10px] py-2 px-2 ${
+              activeIndex === index
+                ? " border border-rose-500 rounded-[7px] active-slide scale-110 mt-[50px] bg-gradient-to-br transform"
+                : " bg-[#FAFAFA] opacity-75"
+            }`}
+          >
+            <div key={index} className={` `}>
               <div className="slide-content">
                 <img
                   src={element.img}
                   alt="img"
-                  className="border border-[#F76680] rounded-full p-2 logo"
+                  className=" border border-rose-500 rounded-full p-2 logo w-[42px] h-[42px]"
                 />
                 <div>
                   <p
@@ -201,32 +227,32 @@ export default Services;
 
 const data = [
   {
-    title: "Mobile App Development 1",
+    title: "Mobile App Development",
     img: "/images/mobile-logo.png",
     description:
       "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
   },
   {
-    title: "Web Design & Development 2",
+    title: "Web Design & Development",
     img: "/images/web-logo.png",
     description:
       "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
   },
   {
-    title: "Software Testing Service 3 ",
+    title: "Mobile App Development",
+    img: "/images/mobile-logo.png",
+    description:
+      "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
+  },
+  {
+    title: "Mobile App Development",
+    img: "/images/mobile-logo.png",
+    description:
+      "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
+  },
+  {
+    title: "Software Testing Service",
     img: "/images/dashboard.png",
-    description:
-      "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
-  },
-  {
-    title: "Mobile App Development 4",
-    img: "/images/mobile-logo.png",
-    description:
-      "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
-  },
-  {
-    title: "Mobile App Development 5",
-    img: "/images/mobile-logo.png",
     description:
       "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
   },
