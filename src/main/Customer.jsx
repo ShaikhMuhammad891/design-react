@@ -40,8 +40,8 @@ const Customer = () => {
   };
   return (
     <>
-      <div className=" max-w-[1280px] relative mx-auto">
-        <div className=" flex justify-between absolute inset-0 h-fit sm:my-auto mt-[200px]">
+      <div className=" max-w-[1280px] relative mx-auto pb-[80px]">
+        <div className=" flex justify-between absolute md:inset-0 md:h-fit md:my-auto mt-[-300px] mb:inset-0">
           <button className="" onClick={goPrev}>
             <ArrowBack />
           </button>
@@ -85,11 +85,35 @@ const Customer = () => {
           // navigation={true}
           loop={true}
           modules={[Navigation]}
-          className="mySwiper"
-          slidesPerView={5}
+          className="mySwiper pb-4"
           centeredSlides={true}
           ref={swiperRef}
-          spaceBetween={50}
+          breakpoints={{
+            375: {
+              slidesPerView: 3,
+              spaceBetween: 5,
+            },
+            640: {
+              slidesPerView: 5,
+              spaceBetween: 5,
+            },
+            768: {
+              slidesPerView: 5,
+              spaceBetween: 10,
+            },
+            1024: {
+              slidesPerView: 5,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 5,
+              spaceBetween: 30,
+            },
+            1280: {
+              slidesPerView: 5,
+              spaceBetween: 40,
+            },
+          }}
         >
           {data.map((e, i) => (
             <>
@@ -98,8 +122,8 @@ const Customer = () => {
                   key={i}
                   className={`${
                     activeIndex === i
-                      ? " opacity-100 transform scale-110 min-w-[158px] bg-green-400"
-                      : " opacity-60 bg-gray-400"
+                      ? " opacity-100 transform scale-110 min-w-[158px] "
+                      : " opacity-60 "
                   }`}
                 >
                   <div className=" flex justify-center items-center">
@@ -109,13 +133,13 @@ const Customer = () => {
                       className=" sm:w-[85px] sm:h-[85px] w-[65px] h-[65px] "
                     />
                   </div>
-                  <div className=" flex items-center justify-center lg:gap-[5.48px] md:gap-[2px] md:mt-[15px] sm:mt-[10px] mt-[5px] gap-[1px]">
+                  <div className=" flex items-center justify-center  md:mt-[15px] sm:mt-[10px] mt-[5px] gap-[1px]">
                     {[...Array(5)].map((_, index) => (
                       <img
                         key={index}
                         src={e.rating}
                         alt=""
-                        className=" md:w-[20px] md:h-[20px] sm:w-[15px] sm:h-[15px] max-w-[10px] max-h-[10px]"
+                        className=" md:w-[20px] md:h-[20px] sm:w-[15px] sm:h-[15px] max-w-[20px] max-h-[20px]"
                       />
                     ))}
                   </div>
@@ -144,8 +168,8 @@ const Customer = () => {
           ))}
         </Swiper>
         {/* </div> */}
-        <div className="  w-full mx-auto flex justify-center">
-          <div className=" sm:flex justify-between absolute max-w-[1063px] w-full md:mt-[-100px] sm:mt-[-80px] hidden">
+        <div className="  w-full mx-auto sm:flex justify-center hidden sm:block">
+          <div className=" sm:flex justify-between absolute max-w-[1063px] w-full">
             <div>
               <img
                 src="/images/deco-up.png"
