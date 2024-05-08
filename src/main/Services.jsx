@@ -184,7 +184,7 @@ const Services = () => {
           type: "bullets",
         }}
         modules={[Pagination]}
-        className="mySwiper max-w-[1440px] w-full h-auto"
+        className="mySwiper max-w-[1440px] w-full h-auto lg:mt-[63px]"
       >
         {data.map((element, index) => (
           <SwiperSlide
