@@ -1,0 +1,29 @@
+.swiper-slide-active {
+    margin-top: 39px;
+    border: 1px solid;
+    border-color: rgba(247, 102, 128, 1);
+}
+
+.swiper-slide-active .title {
+    opacity: 1;
+    background: linear-gradient(225deg, #f76680 0%, #57007b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.slide .swiper-slide-active .description {
+    opacity: 1;
+}
+
+.title {
+    opacity: 0.75;
+}
+
+.description {
+    opacity: 0.75;
+}
+
+.slider-main {
+    border-radius: 8px;
+}

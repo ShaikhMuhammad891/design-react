@@ -137,10 +137,6 @@ const Services = () => {
   const [numberDecrease, setNumberDecrease] = useState(data.length);
 
   const handleSlideChange = (swiper) => {
-    console.log("active index is: " + activeIndex);
-    setNumberIncrease(activeIndex);
-    console.log("number" + numberIncrease);
-    setNumberDecrease(numberDecrease);
     setActiveIndex(swiper.realIndex);
   };
 
@@ -193,7 +189,7 @@ const Services = () => {
         {data.map((element, index) => (
           <SwiperSlide
             key={index}
-            className={` border mb:mb-[50px] bg-[#FAFAFA] lg:max-w-[330px] md:min-w-[233px] min-w-[300px] w-full lg:pl-[16px] md:pl-[12px] lg:py-[20px] md:py-[20px] sm:py-[15px] sm:pl-[10px] py-2 px-2 ${
+            className={` border bg-[#FAFAFA] lg:max-w-[330px] md:min-w-[233px] min-w-[300px] w-full lg:pl-[16px] md:pl-[12px] lg:py-[20px] md:py-[20px] sm:py-[15px] sm:pl-[10px] py-2 px-2 ${
               activeIndex === index
                 ? " border border-rose-500 rounded-[7px] active-slide scale-110 mt-[50px] bg-gradient-to-br transform"
                 : " bg-[#FAFAFA] opacity-75"
@@ -227,13 +223,13 @@ const Services = () => {
         <div className="swiper-pagination mb-7"></div>
       </div>
 
-      <div className=" flex justify-end mr-24">
+      {/* <div className=" flex justify-end mr-24">
         <p>{numberIncrease}</p>
         <div className="progressBar  max-w-[200px] h-[10px] w-full bg-gray-300 rounded-xl">
           <div className="progressBarMover bg-black "></div>
         </div>
         <p>{numberDecrease}</p>
-      </div>
+      </div> */}
     </div>
   );
 };
