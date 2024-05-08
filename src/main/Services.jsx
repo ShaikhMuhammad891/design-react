@@ -129,7 +129,9 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "./Services.css"; // Import your custom CSS file for Services component
 import "../index.css";
-import { Pagination } from "swiper/modules";
+import { Pagination, EffectCoverflow, EffectFlip, Navigation } from "swiper/modules";
+// SwiperCore.use([Pagination, EffectCoverflow]);
+
 const Services = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [progressBar, seProgressBar] = useState(activeIndex + 1);
@@ -146,44 +148,52 @@ const Services = () => {
         Services we offer
       </p>
       <Swiper
+        effect={"coverflow"}
         onSlideChange={handleSlideChange}
-        // slidesPerView={4}
-        // spaceBetween={40}
+        slidesPerView="auto"
+        spaceBetween={40}
         grabCursor={true}
         centeredSlides={true}
         loop={true}
-        breakpoints={{
-          375: {
-            slidesPerView: 1,
-            spaceBetween: 5,
-          },
-          640: {
-            slidesPerView: 2,
-            spaceBetween: 5,
-          },
-          768: {
-            slidesPerView: 3,
-            spaceBetween: 10,
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
-          1280: {
-            slidesPerView: 4,
-            spaceBetween: 40,
-          },
-        }}
+        // breakpoints={{
+        //   375: {
+        //     slidesPerView: 1,
+        //     spaceBetween: 5,
+        //   },
+        //   640: {
+        //     slidesPerView: 2,
+        //     spaceBetween: 5,
+        //   },
+        //   768: {
+        //     slidesPerView: 3,
+        //     spaceBetween: 10,
+        //   },
+        //   1024: {
+        //     slidesPerView: 3,
+        //     spaceBetween: 20,
+        //   },
+        //   1024: {
+        //     slidesPerView: 3,
+        //     spaceBetween: 30,
+        //   },
+        //   1280: {
+        //     slidesPerView: 4,
+        //     spaceBetween: 40,
+        //   },
+        // }}
         pagination={{
           el: ".swiper-pagination",
           clickable: true,
           type: "bullets",
         }}
-        modules={[Pagination]}
+        modules={[EffectCoverflow, Pagination, EffectFlip, Navigation]}
+        coverflowEffect={{
+          rotate: 20,
+          stretch: 0,
+          depth: 600,
+          modifier: 1,
+          slideShadows: true,
+        }}
         className="mySwiper max-w-[1440px] w-full h-auto lg:mt-[63px]"
       >
         {data.map((element, index) => (
@@ -191,7 +201,7 @@ const Services = () => {
             key={index}
             className={` border bg-[#FAFAFA] lg:max-w-[330px] md:min-w-[233px] min-w-[300px] w-full lg:pl-[16px] md:pl-[12px] lg:py-[20px] md:py-[20px] sm:py-[15px] sm:pl-[10px] py-2 px-2 ${
               activeIndex === index
-                ? " border border-rose-500 rounded-[7px] active-slide scale-110 mt-[50px] bg-gradient-to-br transform"
+                ? " border border-rose-500 rounded-[7px] active-slide scale-110 mt-[39px] bg-gradient-to-br transform"
                 : " bg-[#FAFAFA] opacity-75"
             }`}
           >
