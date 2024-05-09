@@ -42,11 +42,11 @@ const Customer = () => {
     <>
       <div className=" max-w-[1280px] relative mx-auto pb-[80px]">
         <div className=" flex justify-between absolute md:inset-0 md:h-fit md:my-auto mt-[-300px] mb:inset-0">
-          <button className="" onClick={goPrev}>
+          <button className=" bg-transparent" onClick={goPrev}>
             <ArrowBack />
           </button>
-          <button className="" onClick={goNext}>
-            <ArrowForward color="red" />
+          <button className=" bg-transparent" onClick={goNext}>
+            <ArrowForward color="#57007B" />
           </button>
         </div>
         <div className=" lg:mt-[124px] md:mt-[80px] sm:mt-[60px] mt-[40px] flex justify-center">
