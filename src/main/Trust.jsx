@@ -99,7 +99,7 @@ const Trust = () => {
           </button>
         </div>
 
-        <div className=" absolute right-[553px] bottom-[-65px] ">
+        <div className=" absolute right-[553px] bottom-[-95px] ">
           <Eclips />
         </div>
       </div>
