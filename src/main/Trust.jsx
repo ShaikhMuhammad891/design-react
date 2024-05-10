@@ -36,7 +36,7 @@ const Trust = () => {
   return (
     <>
       <div className=" relative">
-        <div className=" absolute left-[105px] md:top-[-185px] sm:mt-[-135px] mt-[-120px] z-[-1]">
+        <div className=" absolute  z-[-1] md:top-[-185px] md:left-[105px] sm:top-[-135px] sm:left-[80px] left-[30px] top-[-118px]">
           <Eclips />
         </div>
         <div className=" md:ml-[105px] ml-4">

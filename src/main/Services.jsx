@@ -168,6 +168,7 @@ const Services = () => {
             640: {
               slidesPerView: 2,
               spaceBetween: 5,
+              // centeredSlides: false,
             },
             768: {
               slidesPerView: 3,
@@ -197,7 +198,7 @@ const Services = () => {
           {data.map((element, index) => (
             <SwiperSlide
               key={index}
-              className={`  div-bg rounded-[7px] lg:max-w-[330px] md:max-w-[233px]  w-full lg:pl-[16px] md:pl-[12px] lg:py-[38.5px] lg:px-[16px] md:py-[20px] md:px-[20px] sm:py-[15px] sm:pl-[10px] py-2 px-2 ${
+              className={`  div-bg rounded-[7px] lg:max-w-[330px] md:max-w-[250px] sm:max-w-[316pxpx] textc  w-full lg:pl-[16px] md:pl-[12px] lg:py-[38.5px] lg:px-[16px] md:py-[20px] md:px-[20px] sm:py-[15px] sm:pl-[10px] py-6 px-4 ${
                 activeIndex === index
                   ? " border border-[#C2447E] rounded-[7px] active-slide scale-110 mt-[39px] bg-gradient-to-br transform"
                   : " opacity-75"
@@ -210,13 +211,13 @@ const Services = () => {
                   </div>
                   <div>
                     <p
-                      className={`lg:text-[20px] md:text-[16px] sm:text-[14px] text-[12px] mt-2 font-inter md:font-[600] sm:font-[500] font-[400] lg:leading-[27.3px] md:leading-[21px] lg:mt-[15px] sm:mt-[10px] ${
+                      className={`lg:text-[20px] md:text-[16px] sm:text-[14px] text-[18px] mt-2 font-inter  font-[600] lg:leading-[27.3px] md:leading-[21px] lg:mt-[15px] sm:mt-[10px] ${
                         activeIndex === index ? " text-color" : ""
                       } `}
                     >
                       {element.title}
                     </p>
-                    <p className="lg:mt-[20px] md:mt-[15px] sm:mt-[12px] mt-2  leading-3 font-inter md:font-[400] sm:font-[300] text-[12px] lg:text-[14px] md:text-[13px] lg:leading-[22.68px] md:leading-4 sm:leading-4 text-[#4A5568] max-w-[301px]">
+                    <p className="lg:mt-[20px] md:mt-[15px] sm:mt-[12px] mt-2 font-inter font-[400]  text-[14px] lg:text-[14px] md:text-[14px] lg:leading-[22.68px] leading-[22px] text-[#4A5568] max-w-[301px]">
                       {element.description}
                     </p>
                   </div>
@@ -226,11 +227,11 @@ const Services = () => {
           ))}
         </Swiper>
       </div>
-      <div className="pagination-area">
+      <div className="pagination-area mt-6">
         <div className="swiper-pagination absolute lg:mb-[40px] mb-[10px]"></div>
       </div>
       {/* progressbar */}
-      <div className="prog-container max-w-[164px] h-[3px] w-full  absolute lg:right-[181px] lg:bottom-[59px] right-[30px] bottom-[30px]   flex items-center justify-center gap-[11px]">
+      <div className=" prog-container sm:max-w-[164px] max-w-[130px] h-[3px] w-full  absolute lg:right-[181px] lg:bottom-[59px] sm:right-[30px] sm:bottom-[25px] mb:right-0 top-16   flex items-center justify-center gap-[11px]">
         <span className="progress-left font-inter font-[500] text-[16px] leading-[25px]">
           0{activeIndex + 1}
         </span>
