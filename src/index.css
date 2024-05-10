@@ -108,6 +108,20 @@ button:focus-visible {
   border: transparent !important;
 }
 
+@media screen and (max-width : 639px) {
+  .swiper-pagination-bullet-active {
+    font-size: xx-large !important;
+
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  .swiper-pagination-bullet {
+    width: 12px !important;
+    height: 12px !important;
+  }
+}
+
 .swiper-pagination-bullet {
   font-size: 16px !important;
   width: 13px;

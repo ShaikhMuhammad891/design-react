@@ -35,27 +35,27 @@ const Header = () => {
           }`}
         >
           <ul className="  xl: md:flex lg:space-x-[48.2px] md:space-x-4">
-            <li className=" text-[#4A5568] font-[500] lg:text-[16px] md:text-[12px] sm:text-[11px] text-[10px] lg:leading-[25px] md:leading-[20px] sm:leading-[16px] leading-[14px]">
+            <li className=" text-[#4A5568] font-[500] lg:text-[16px]  text-[12px] leading-[25px]  ">
               About Us
             </li>
-            <li className=" text-[#4A5568] font-[500] lg:text-[16px] md:text-[12px] sm:text-[11px] text-[10px] lg:leading-[25px] md:leading-[20px] sm:leading-[16px] leading-[14px]">
+            <li className=" text-[#4A5568] font-[500] lg:text-[16px]  text-[12px] leading-[25px]  ">
               Services
             </li>
-            <li className=" text-[#4A5568] font-[500] lg:text-[16px] md:text-[12px] sm:text-[11px] text-[10px] lg:leading-[25px] md:leading-[20px] sm:leading-[16px] leading-[14px]">
+            <li className=" text-[#4A5568] font-[500] lg:text-[16px]  text-[12px] leading-[25px]  ">
               Case Studies
             </li>
-            <li className=" text-[#4A5568] font-[500] lg:text-[16px] md:text-[12px] sm:text-[11px] text-[10px] lg:leading-[25px] md:leading-[20px] sm:leading-[16px] leading-[14px]">
+            <li className=" text-[#4A5568] font-[500] lg:text-[16px]  text-[12px] leading-[25px]  ">
               Blog
             </li>
-            <li className=" text-[#4A5568] font-[500] lg:text-[16px] md:text-[12px] sm:text-[11px] text-[10px] lg:leading-[25px] md:leading-[20px] sm:leading-[16px] leading-[14px]">
+            <li className=" text-[#4A5568] font-[500] lg:text-[16px]  text-[12px] leading-[25px]  ">
               How It Works
             </li>
-            <li className=" text-[#4A5568] font-[500] lg:text-[16px] md:text-[12px] sm:text-[11px] text-[10px] lg:leading-[25px] md:leading-[20px] sm:leading-[16px] leading-[14px]">
+            <li className=" text-[#4A5568] font-[500] lg:text-[16px]  text-[12px] leading-[25px]  ">
               Hire
             </li>
           </ul>
         </div>
-        <div className={`contact ${showNav ? " block" : " hidden md:block "}`}>
+        <div className={`contact ${showNav ? " block ml-[-5px]" : " hidden md:block "}`}>
           <Button />
         </div>
       </header>
