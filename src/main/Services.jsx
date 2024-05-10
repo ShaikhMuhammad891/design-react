@@ -163,7 +163,7 @@ const Services = () => {
           breakpoints={{
             375: {
               slidesPerView: 1,
-              spaceBetween: 5,
+              // spaceBetween: 5,
             },
             640: {
               slidesPerView: 2,
@@ -197,13 +197,13 @@ const Services = () => {
           {data.map((element, index) => (
             <SwiperSlide
               key={index}
-              className={`  div-bg rounded-[7px] lg:max-w-[330px] md:max-w-[233px] sm:max-w-[316px]  w-full lg:pl-[16px] md:pl-[12px] lg:py-[38.5px] lg:px-[16px] md:py-[20px] md:px-[20px] sm:py-[15px] sm:pl-[10px] py-6 px-4 ${
+              className={` div-bg rounded-[7px] lg:max-w-[330px] md:max-w-[233px] sm:max-w-[316px]   w-full lg:pl-[16px] md:pl-[12px] lg:py-[38.5px] lg:px-[16px] md:py-[20px] md:px-[20px] sm:py-[15px] sm:pl-[10px] py-6 px-4 ${
                 activeIndex === index
                   ? " border border-[#C2447E] rounded-[7px] active-slide scale-110 mt-[39px] bg-gradient-to-br transform"
                   : " opacity-75"
               }`}
             >
-              <div key={index} className={` `}>
+              <div key={index} className={``}>
                 <div className="slide-content">
                   <div className=" max-w-[58px] w-full h-[58px] border border-[#C2447E] rounded-full flex justify-center items-center">
                     <img src={element.img} alt="img" className="" />
@@ -216,7 +216,7 @@ const Services = () => {
                     >
                       {element.title}
                     </p>
-                    <p className="lg:mt-[20px] md:mt-[15px] sm:mt-[12px] mt-2   font-inter font-[400] lg:text-[14px] text-[14px] lg:leading-[22.68px]  leading-5 text-[#4A5568] max-w-[301px]">
+                    <p className="lg:mt-[20px] md:mt-[15px] sm:mt-[12px] mt-2 font-inter font-[400] lg:text-[14px] text-[14px] lg:leading-[22.68px]  leading-5 text-[#4A5568] max-w-[301px]">
                       {element.description}
                     </p>
                   </div>
@@ -230,8 +230,8 @@ const Services = () => {
         <div className="swiper-pagination absolute lg:mb-[40px] mb-[10px]"></div>
       </div>
       {/* progressbar */}
-      <div className="prog-container sm:max-w-[164px] max-w-[115px] h-[3px] w-full  absolute lg:right-[181px] lg:bottom-[59px] sm:right-[30px] sm:bottom-[25px] bottom-[25px] right-2   flex items-center justify-center gap-[11px]">
-        <span className="progress-left font-inter font-[500] text-[16px] leading-[25px]">
+      <div className="prog-container sm:max-w-[164px] max-w-[115px] h-[3px] w-full  absolute lg:right-[181px] lg:bottom-[59px] sm:right-[30px] sm:bottom-[25px] bottom-[22.5px] right-2   flex items-center justify-center gap-[11px]">
+        <span className="progress-left font-inter font-[500] sm:text-[16px] text-[12px] leading-[25px]">
           0{activeIndex + 1}
         </span>
 
@@ -241,7 +241,7 @@ const Services = () => {
             style={{ width: `${swiperProgress}%` }}
           ></div>
         </div>
-        <span className="progress-right font-inter font-[500] text-[16px] leading-[25px]">
+        <span className="progress-right font-inter font-[500] sm:text-[16px] text-[12px] leading-[25px]">
           0{data.length - activeIndex}
         </span>
       </div>

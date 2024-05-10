@@ -34,7 +34,7 @@ const Header = () => {
             showNav ? "block" : " center bg-white hidden md:block "
           }`}
         >
-          <ul className="  xl: md:flex lg:space-x-[48.2px] md:space-x-4">
+          <ul className="  xl: md:flex lg:space-x-[48.2px] md:space-x-4 ml-[13px] sm:ml-0">
             <li className=" text-[#4A5568] font-[500] lg:text-[16px]  text-[12px] leading-[25px]  ">
               About Us
             </li>
@@ -55,7 +55,7 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <div className={`contact ${showNav ? " block ml-[-5px]" : " hidden md:block "}`}>
+        <div className={`contact ${showNav ? " block ml-[8px]" : " hidden md:block "}`}>
           <Button />
         </div>
       </header>
