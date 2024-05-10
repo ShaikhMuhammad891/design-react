@@ -1,0 +1,36 @@
+/* Services.css */
+.slide {
+  transition: transform 0.3s ease;
+}
+
+.slide.selected {
+  transform: scale(1.1); /* Example: Scale up the selected slide */
+}
+.grad-text {
+  background: linear-gradient(225deg, #f76680 0%, #57007b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-color {
+  background: linear-gradient(225deg, #f76680 0%, #57007b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.example::-webkit-scrollbar {
+  display: none;
+}
+
+.swiper-pagination {
+  color: aqua;
+}
+
+
+/* border-color {
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  border-image: linear-gradient(225deg, #f76680 0%, #57007b 100%);
+} */
