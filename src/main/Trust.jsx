@@ -86,7 +86,7 @@ const Trust = () => {
         </div>
         <div className=" flex gap-[22px] justify-end sm:mr-[81px] mb-[60px] mt-[30px]">
           <button
-            className=" sm:py-[15.5px] sm:px-[15px] border-[2px] border-[#57007B] rounded-full"
+            className=" sm:py-[15.5px] sm:px-[15px] border-2px border-[#57007B] rounded-full"
             onClick={goPrev}
           >
             <ArrowBack />
