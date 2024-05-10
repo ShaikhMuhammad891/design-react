@@ -32,7 +32,7 @@ const TopFront = () => {
             <img src="/images/pc-guy.png" alt="pc-guy" />
           </div>
         </div>
-        <div className=" mt-[51px] sm:ml-[483px] absolute bottom-[-35.5px]">
+        <div className=" mt-[51px] sm:ml-[483px] absolute bottom-[-125.5px]">
           <Eclips />
         </div>
       </div>

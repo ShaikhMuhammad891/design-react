@@ -148,7 +148,7 @@ const Services = () => {
   };
 
   return (
-    <div className="bg-[#F9F9FF] border-y border-[#E7DAED] lg:pb-[150px] md:pb-[70px] sm:pb-[80px] pb-[40px] relative">
+    <div className="bg-[#F9F9FF] border-y border-[#E7DAED] lg:pb-[150px] md:pb-[70px] sm:pb-[80px] pb-[40px] relative mt-[90px]">
       <p className="text-[#1A202C] lg:text-[35px] md:text-[28px] sm:text-[25px] text-[20px]  md:font-[700] sm:font-[500] lg:leading-[55px] md:leading-[40px] sm:leading-[30px] lg:mt-[45px] md:mt-[35px] sm:mt-[25px] mt-[20px] font-inter text-center">
         Services we offer
       </p>
