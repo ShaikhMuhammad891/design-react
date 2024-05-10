@@ -95,17 +95,25 @@ button:focus-visible {
 .swiper-pagination {
   top: -100px;
   margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .swiper-pagination-bullet-active {
-  background: linear-gradient(225deg, #f76680 0%, #57007b 100%);
+  background: linear-gradient(225deg, #f76680 0%, #57007b 100%) !important;
   font-size: xx-large !important;
+  width: 18px !important;
+  height: 18px !important;
+  border: transparent !important;
 }
 
 .swiper-pagination-bullet {
   font-size: 16px !important;
-  width: 18px;
-  height: 18px;
+  width: 13px;
+  height: 13px;
+  border: 1px solid black;
+  background: #CBD5E0;
 }
 
 .active-slide {
@@ -223,5 +231,4 @@ button:disabled {
 
 }
 
-.swiper-slide-active{
-}
+.swiper-slide-active {}

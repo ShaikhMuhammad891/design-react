@@ -227,10 +227,10 @@ const Services = () => {
         </Swiper>
       </div>
       <div className="pagination-area">
-        <div className="swiper-pagination absolute lg:mb-[40px] mb-[10px] "></div>
+        <div className="swiper-pagination absolute lg:mb-[40px] mb-[10px]"></div>
       </div>
       {/* progressbar */}
-      <div className="prog-container max-w-[164px] h-[3px] w-full  absolute lg:right-[181px] lg:bottom-[59px] right-[100px] bottom-[30px]   flex items-center justify-center gap-[11px]">
+      <div className="prog-container max-w-[164px] h-[3px] w-full  absolute lg:right-[181px] lg:bottom-[59px] right-[30px] bottom-[30px]   flex items-center justify-center gap-[11px]">
         <span className="progress-left font-inter font-[500] text-[16px] leading-[25px]">
           0{activeIndex + 1}
         </span>
