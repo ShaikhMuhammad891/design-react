@@ -30,17 +30,26 @@ const TechStack = () => {
           </p>
           <ul className="flex justify-center mt-[38px] xl:gap-x-[60px] lg:gap-[50px] md:gap-[40px] sm:gap-[30px] gap-[20px]">
             <li
-              className={`lg:text-[18px] md:text-[14px] sm:text-[12px] text-[10px] font-inter font-[400] leading-[30px] ${
+              className={`lg:text-[18px] md:text-[14px] sm:text-[12px] text-[10px] font-inter font-[400] leading-[30px] cursor-pointer ${
                 selectedCategory === "Backend"
                   ? "text-color font-[600]"
                   : "text-[#1A202C]"
               }`}
               onClick={() => setSelectedCategory("Backend")}
             >
-              Backend
+              <p>Backend</p>
+              <div
+                className={` ${
+                  selectedCategory === "Backend"
+                    ? " max-w-[113px] w-full"
+                    : "hidden"
+                }`}
+              >
+                <img src="/images/minline.png" alt="" className=" mx-auto" />
+              </div>
             </li>
             <li
-              className={`lg:text-[18px] md:text-[14px] sm:text-[12px] text-[10px] font-inter font-[400] leading-[30px] ${
+              className={`lg:text-[18px] md:text-[14px] sm:text-[12px] text-[10px] font-inter font-[400] leading-[30px] cursor-pointer ${
                 selectedCategory === "Frontend"
                   ? "text-color font-[600]"
                   : "text-[#1A202C]"
@@ -48,9 +57,18 @@ const TechStack = () => {
               onClick={() => setSelectedCategory("Frontend")}
             >
               Frontend
+              <div
+                className={` ${
+                  selectedCategory === "Frontend"
+                    ? " max-w-[113px] w-full"
+                    : "hidden"
+                }`}
+              >
+                <img src="/images/minline.png" alt="" className=" mx-auto" />
+              </div>
             </li>
             <li
-              className={`lg:text-[18px] md:text-[14px] sm:text-[12px] text-[10px] font-inter font-[400] leading-[30px] ${
+              className={`lg:text-[18px] md:text-[14px] sm:text-[12px] text-[10px] font-inter font-[400] leading-[30px] cursor-pointer ${
                 selectedCategory === "Database"
                   ? "text-color font-[600]"
                   : "text-[#1A202C]"
@@ -58,9 +76,18 @@ const TechStack = () => {
               onClick={() => setSelectedCategory("Database")}
             >
               Database
+              <div
+                className={` ${
+                  selectedCategory === "Database"
+                    ? " max-w-[113px] w-full"
+                    : "hidden"
+                }`}
+              >
+                <img src="/images/minline.png" alt="" className=" mx-auto" />
+              </div>
             </li>
             <li
-              className={`lg:text-[18px] md:text-[14px] sm:text-[12px] text-[10px] font-inter font-[400] leading-[30px] ${
+              className={`lg:text-[18px] md:text-[14px] sm:text-[12px] text-[10px] font-inter font-[400] leading-[30px] cursor-pointer ${
                 selectedCategory === "CMS"
                   ? "text-color font-[600]"
                   : "text-[#1A202C]"
@@ -68,9 +95,18 @@ const TechStack = () => {
               onClick={() => setSelectedCategory("CMS")}
             >
               CMS
+              <div
+                className={` ${
+                  selectedCategory === "CMS"
+                    ? " max-w-[113px] w-full"
+                    : "hidden"
+                }`}
+              >
+                <img src="/images/minline.png" alt="" className=" mx-auto" />
+              </div>
             </li>
             <li
-              className={`lg:text-[18px] md:text-[14px] sm:text-[12px] text-[10px] font-inter font-[400] leading-[30px] ${
+              className={`lg:text-[18px] md:text-[14px] sm:text-[12px] text-[10px] font-inter font-[400] leading-[30px] cursor-pointer ${
                 selectedCategory === "CloudTesting"
                   ? "text-color font-[600]"
                   : "text-[#1A202C]"
@@ -78,16 +114,35 @@ const TechStack = () => {
               onClick={() => setSelectedCategory("CloudTesting")}
             >
               Cloud Testing
+              <div
+                className={` ${
+                  selectedCategory === "CloudTesting"
+                    ? " max-w-[113px] w-full"
+                    : "hidden"
+                }`}
+              >
+                <img src="/images/minline.png" alt="" className=" mx-auto" />
+              </div>
             </li>
             <li
-              className={`lg:text-[18px] md:text-[14px] sm:text-[12px] text-[10px] font-inter font-[400] leading-[30px] ${
+              className={`lg:text-[18px] md:text-[14px] sm:text-[12px] text-[10px] font-inter font-[400] leading-[30px] cursor-pointer ${
                 selectedCategory === "DevOps"
                   ? "text-color font-[600]"
                   : "text-[#1A202C]"
               }`}
               onClick={() => setSelectedCategory("DevOps")}
             >
-              DevOps
+              <p>DevOps</p>
+              <div
+                className={` ${
+                  selectedCategory === "DevOps"
+                    ? " max-w-[113px] w-full"
+                    : "hidden"
+                }`}
+              >
+                <img src="/images/minline.png" alt="" className=" mx-auto" />
+              </div>
+             
             </li>
           </ul>
           <div className="max-w-[1064px] mx-auto mt-[72px]">
@@ -214,7 +269,7 @@ const upperLine = [
     logo: "/images/go.png",
     category: "CloudTesting",
   },
- 
+
   {
     logo: "/images/php.png",
     category: "CMS",
