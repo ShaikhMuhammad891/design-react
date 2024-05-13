@@ -14,16 +14,22 @@ import { Navigation } from "swiper/modules";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
+import { Flare } from "@mui/icons-material";
 
 // import required modules
 
 const Trust = () => {
+  const [isClickedNext, setIsClickedNext] = useState(false);
+  const [isClickedPrev, setIsClickedPrev] = useState(false);
+
   const swiperRefe = useRef(null);
 
   const goNext = () => {
     if (swiperRefe.current !== null && swiperRefe.current.swiper !== null) {
       swiperRefe.current.swiper.slideNext();
     }
+    setIsClickedNext(true);
+    setIsClickedPrev(false);
   };
 
   const goPrev = () => {
@@ -31,6 +37,8 @@ const Trust = () => {
     if (swiperRefe.current !== null && swiperRefe.current.swiper !== null) {
       swiperRefe.current.swiper.slidePrev();
     }
+    setIsClickedPrev(true);
+    setIsClickedNext(false);
   };
 
   return (
@@ -84,18 +92,26 @@ const Trust = () => {
             </span>
           </p>
         </div>
-        <div className=" flex sm:gap-[22px] gap-2 justify-end lg:mr-[81px] lg:mb-[60px] lg:mt-[30px]">
-            <button
-              className="  border border-[#57007B] sm:py-[15.5px] sm:px-[15px]  bg-white rounded-full"
+        <div className=" flex sm:gap-[22px] gap-2 justify-end lg:mr-[81px] mb-[60px] mr-6">
+          <button className=" bg-transparent">
+            <div
+              className={` flex justify-center items-center p-[14px] border-[2px] border-[#57007B] rounded-full${
+                isClickedPrev ? " bg-[#57007B]" : " "
+              }`}
               onClick={goPrev}
             >
-              <ArrowBack color="#57007B" />
-            </button>
-          <button
-            className=" sm:py-[15.5px] sm:px-[15px] bg-[#57007B]  rounded-full"
-            onClick={goNext}
-          >
-            <ArrowForward color="white" />
+              <ArrowBack color={`${isClickedPrev ? "white" : "#57007B"}`} />
+            </div>
+          </button>
+          <button className=" bg-transparent">
+            <div
+              className={` flex justify-center items-center p-[14px] border-[2px] border-[#57007B] rounded-full${
+                isClickedNext ? " bg-[#57007B]" : ""
+              }`}
+              onClick={goNext}
+            >
+              <ArrowForward color={`${isClickedNext ? "white" : "#57007B"}`} />
+            </div>
           </button>
         </div>
         <div className=" absolute right-[553px] bottom-[-95px] ">
@@ -111,6 +127,7 @@ const Trust = () => {
           }}
           // navigation={true}
           modules={[Navigation]}
+          spaceBetween={40}
           loop={true}
           className="mySwiper"
           ref={swiperRefe}
@@ -118,7 +135,6 @@ const Trust = () => {
           breakpoints={{
             375: {
               slidesPerView: 2,
-              spaceBetween: 40,
             },
             640: {
               slidesPerView: 3,

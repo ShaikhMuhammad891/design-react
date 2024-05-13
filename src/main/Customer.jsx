@@ -19,6 +19,8 @@ import { Navigation } from "swiper/modules";
 
 const Customer = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isClickedNext, setIsClickedNext] = useState(false);
+  const [isClickedPrev, setIsClickedPrev] = useState(false);
 
   const SlideChange = (swiper) => {
     setActiveIndex(swiper.realIndex);
@@ -26,28 +28,49 @@ const Customer = () => {
 
   const swiperRef = useRef(null);
 
-  const goNext = () => {
+  const goNext = (event) => {
     if (swiperRef.current !== null && swiperRef.current.swiper !== null) {
       swiperRef.current.swiper.slideNext();
     }
+    event.stopPropagation();
+
+    setIsClickedNext(true);
+    setIsClickedPrev(false);
   };
 
-  const goPrev = () => {
+  const goPrev = (event) => {
     console.log("its clicked");
     if (swiperRef.current !== null && swiperRef.current.swiper !== null) {
       swiperRef.current.swiper.slidePrev();
     }
+    event.stopPropagation();
+
+    setIsClickedPrev(true);
+    setIsClickedNext(false);
   };
   return (
     <>
-      <div className=" max-w-[1280px] relative mx-auto pb-[80px]">
-        
-        <div className=" flex justify-between absolute md:inset-0 md:h-fit md:my-auto inset-0 xl:mx-[81px]">
-          <button className=" bg-transparent h-[50px] my-auto" onClick={goPrev}>
-            <ArrowBack />
+      <div className=" max-w-[1280px] relative mx-auto pb-[60px]">
+        <div className=" absolute flex justify-between w-full inset-0 h-[50px] lg:my-auto md:mt-[200px]">
+          <button className=" bg-transparent">
+            <div
+              className={`p-[11.25px] border-[2px] border-[#57007B] rounded-full${
+                isClickedPrev ? " bg-[#57007B]" : ""
+              }`}
+              onClick={goPrev}
+            >
+              <ArrowBack color={`${isClickedPrev ? "white" : "#57007B"}`} />
+            </div>
           </button>
-          <button className=" bg-transparent h-[50px] my-auto" onClick={goNext}>
-            <ArrowForward color="#57007B" />
+          <button className=" bg-transparent">
+            <div
+              className={`p-[11.25px] border-[2px] border-[#57007B] rounded-full ${
+                isClickedNext ? " bg-[#57007B]" : ""
+              }`}
+              onClick={goNext}
+            >
+              <ArrowForward color={`${isClickedNext ? "white" : "#57007B"}`} />
+            </div>
           </button>
         </div>
         <div className=" lg:mt-[124px] md:mt-[80px] sm:mt-[60px] mt-[40px] flex justify-center">
@@ -252,13 +275,13 @@ const data2 = [
     text: "Our approach is client-centric, focusing on understanding your unique needs and objectives. We tailor our services to ensure that every project is a reflection of your brand and vision. From concept to execution, we are with you every step of the way, delivering results that matter.",
   },
   {
-    text: "At Alcaline Solutions, we believe in the power of collaboration. By working closely with our clients, we cultivate strong partnerships built on trust and transparency. Together, we achieve remarkable outcomes that propel businesses forward in today's dynamic market landscape.",
+    text: "At Alcaline Solutions, and there we believe in the power of collaboration. By working closely with our clients, we cultivate strong partnerships built on trust and transparency. Together, we achieve remarkable outcomes that propel businesses forward in today's dynamic market landscape.",
   },
   {
     text: "Quality is our top priority. We adhere to the highest standards of craftsmanship and attention to detail, ensuring that every deliverable meets our stringent quality benchmarks. With a focus on precision and perfection, we consistently deliver superior results that exceed expectations.",
   },
   {
-    text: "Our team is comprised of industry veterans and creative minds who are passionate about what they do. With diverse expertise and a shared commitment to excellence, we bring fresh perspectives and innovative solutions to every project we undertake.",
+    text: "Our team is comprised of industry and their sophisticated veterans and creative minds who are passionate about what they do. With diverse expertise and a shared commitment to excellence, we bring fresh perspectives and innovative solutions to every project we undertake.",
   },
   {
     text: "We understand that every business is unique, and we approach each project with a fresh perspective and a focus on delivering tailored solutions. Our team takes the time to listen to your goals and challenges, crafting strategies that align with your vision and drive measurable results.",

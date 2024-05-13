@@ -119,7 +119,15 @@ const upperLine = [
     category: "Backend",
   },
   {
+    logo: "/images/php.png",
+    category: "Frontend",
+  },
+  {
     logo: "/images/sql.png",
+    category: "Database",
+  },
+  {
+    logo: "/images/node.png",
     category: "Database",
   },
   {
@@ -155,15 +163,80 @@ const upperLine = [
     category: "Backend",
   },
   {
-    logo: "/images/react.png",
+    logo: "/images/go.png",
     category: "Frontend",
   },
   {
-    logo: "/images/vue.png",
+    logo: "/images/rails.png",
     category: "Frontend",
   },
   {
     logo: "/images/angular.png",
     category: "Frontend",
+  },
+  {
+    logo: "/images/rails.png",
+    category: "Fronend",
+  },
+  {
+    logo: "/images/mongo.png",
+    category: "Frontend",
+  },
+  {
+    logo: "/images/php.png",
+    category: "DevOps",
+  },
+  {
+    logo: "/images/sql.png",
+    category: "DevOps",
+  },
+  {
+    logo: "/images/rails.png",
+    category: "DevOps",
+  },
+  {
+    logo: "/images/rails.png",
+    category: "CloudTesting",
+  },
+  {
+    logo: "/images/go.png",
+    category: "CloudTesting",
+  },
+  {
+    logo: "/images/mongo.png",
+    category: "CloudTesting",
+  },
+  {
+    logo: "/images/python.png",
+    category: "CloudTesting",
+  },
+  {
+    logo: "/images/go.png",
+    category: "CloudTesting",
+  },
+ 
+  {
+    logo: "/images/php.png",
+    category: "CMS",
+  },
+  {
+    logo: "/images/mongo.png",
+    category: "CMS",
+  },
+  {
+    logo: "/images/sql.png",
+    category: "CMS",
+  },
+  {
+    logo: "/images/rails.png",
+    category: "CMS",
+  },
+  {
+    logo: "/images/node.png",
+    category: "CMS",
+  },
+  {
+    logo: "/images/go.png",
+    category: "CMS",
   },
 ];
