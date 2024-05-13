@@ -4,9 +4,9 @@ import { Line } from "../assets/Logos";
 const Approach = () => {
   return (
     <>
-      <div className="container mx-auto bg-[#F7F7FA] border-y border-[#E7DAED] mt-[119px]">
-        <div className=" md:mt-[71px] sm:mt-[60px] mt-[40px]">
-          <div className=" flex justify-center">
+      <div className="container mx-auto bg-[#F7F7FA] border-y border-[#E7DAED] mt-[100px]">
+        <div className=" ">
+          <div className=" flex justify-center md:mt-[71px] sm:mt-[60px] mt-[40px]">
             <Line />
           </div>
           <p className=" xl:text-[35px] lg:text-[32px] md:text-[28px] sm:text-[25px] text-[20px] font-inter font-[400] text-center xl:leading-[55px] lg:leading-[45px] md:leading-[40px] sm:leading-[35px] mt-[20px] text-[#1A202C]">
@@ -18,7 +18,7 @@ const Approach = () => {
         </div>
 
         {/* map the data */}
-        <div className="grid xl:grid-rows-3 grid-flow-col gap-[25px] md:mt-[80px] sm:mt-[60px] mt-[40px] xl:max-w-[1233px] mb-[98px] grid-rows-6 lg:max-w-[610px] mx-auto md:grid-rows-6 md:max-w-[550px] overflow-scroll ">
+        <div className="grid xl:grid-rows-3 grid-flow-col gap-[25px] md:mt-[80px] sm:mt-[60px] mt-[40px] xl:max-w-[1233px] mb-[98px] grid-rows-6 lg:max-w-[610px] mx-auto md:grid-rows-6 md:max-w-[550px] ">
           {data.map((e, i) => {
             return (
               <>

@@ -42,11 +42,11 @@ const Alcline = () => {
           })}
         </div>
 
-        <div className=" xl:max-w-[1230px] xl:ml-[170px] mt-[20px] lg:max-w-[1000px] mb:hidden xl:block">
+        <div className=" xl:max-w-[1230px] xl:ml-[170px] mt-[15px] lg:max-w-[1000px] mb:hidden xl:block">
           <img src="/images/trophy.png" alt="" />
         </div>
 
-        <div className=" mb:hidden lg:grid xl:max-w-[1040px] w-full  mx-auto xl:mt-[88px] lg:mt-[24px] grid grid-rows-1 grid-flow-col xl:gap-[71px] lg:gap-[31px] lg:max-w-[750px] xl:ml-[235px]  ">
+        <div className=" mb:hidden lg:grid xl:max-w-[1040px] w-full  mx-auto xl:mt-[15px] lg:mt-[24px] grid grid-rows-1 grid-flow-col xl:gap-[71px] lg:gap-[31px] lg:max-w-[750px] xl:ml-[235px]  ">
           {data2.map((e, i) => {
             return (
               <>

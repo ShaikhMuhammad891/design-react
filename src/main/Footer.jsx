@@ -3,8 +3,8 @@ import React from "react";
 const Footer = () => {
   return (
     <>
-      <div className=" md:mt-[133px] dm:mt-[100px] mt-[80px] max-w-[1230px] mx-auto">
-        <div className=" md:flex grid grid-cols-2 relative pb-[81px] border-b border-[#CBD5E0] px-2 ">
+      <div className=" md:mt-[133px] dm:mt-[100px] mt-[80px]">
+        <div className=" max-w-[1230px] mx-auto md:flex grid grid-cols-2 relative pb-[81px] border-b border-[#CBD5E0] px-2 ">
           <div className=" max-w-[372px]">
             <div>
               <img src="/images/main-logo.png" alt="" />

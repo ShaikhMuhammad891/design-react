@@ -16,19 +16,20 @@ import Test from "./Test";
 const LandingPage = () => {
   return (
     <>
-      <TopFront />
-      <Services />
-      {/* <Test /> */}
-      <Trust />
-      <Customer />
-      <CaseStudies />
-      <GreatSoftwares />
-      <Approach />
-      <TechStack />
-      <Alcline />
-      <Resources />
-      <Footer />
-      {/* <SimplePagination /> */}
+      <div className=" mx-auto max-w-[1440px]">
+        <TopFront />
+        <Services />
+        {/* <Test /> */}
+        <Trust />
+        <Customer />
+        <CaseStudies />
+        <GreatSoftwares />
+        <Approach />
+        <TechStack />
+        <Alcline />
+        <Resources />
+        {/* <SimplePagination /> */}
+      </div>
     </>
   );
 };

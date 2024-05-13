@@ -1,13 +1,15 @@
 import React from "react";
 import Header from "./common/Header";
 import LandingPage from "./main/LandingPage";
+import Footer from "./main/Footer";
 
 const App = () => {
   return (
     <>
-      <div className="  mx-auto max-w-[1440px]">
+      <div className="  ">
         <Header />
         <LandingPage />
+        <Footer />
       </div>
     </>
   );
