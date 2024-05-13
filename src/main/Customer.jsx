@@ -41,7 +41,8 @@ const Customer = () => {
   return (
     <>
       <div className=" max-w-[1280px] relative mx-auto pb-[80px]">
-        <div className=" flex justify-between absolute md:inset-0 md:h-fit md:my-auto mt-[-400px] inset-0 xl:mx-[81px]">
+        
+        <div className=" flex justify-between absolute md:inset-0 md:h-fit md:my-auto inset-0 xl:mx-[81px]">
           <button className=" bg-transparent h-[50px] my-auto" onClick={goPrev}>
             <ArrowBack />
           </button>

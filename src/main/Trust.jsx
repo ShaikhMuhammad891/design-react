@@ -84,13 +84,13 @@ const Trust = () => {
             </span>
           </p>
         </div>
-        <div className=" flex gap-[22px] justify-end sm:mr-[81px] mb-[60px] mt-[30px]">
-          <button
-            className=" sm:py-[15.5px] sm:px-[15px] border-2px border-[#57007B] rounded-full"
-            onClick={goPrev}
-          >
-            <ArrowBack />
-          </button>
+        <div className=" flex sm:gap-[22px] gap-2 justify-end lg:mr-[81px] lg:mb-[60px] lg:mt-[30px]">
+            <button
+              className="  border border-[#57007B] sm:py-[15.5px] sm:px-[15px]  bg-white rounded-full"
+              onClick={goPrev}
+            >
+              <ArrowBack color="#57007B" />
+            </button>
           <button
             className=" sm:py-[15.5px] sm:px-[15px] bg-[#57007B]  rounded-full"
             onClick={goNext}
@@ -98,7 +98,6 @@ const Trust = () => {
             <ArrowForward color="white" />
           </button>
         </div>
-
         <div className=" absolute right-[553px] bottom-[-95px] ">
           <Eclips />
         </div>

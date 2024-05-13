@@ -1,96 +1,9 @@
-/* :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* .swiper-pagination-bullet {
-  width: var(
-    --swiper-pagination-bullet-width,
-    var(--swiper-pagination-bullet-size, 18px)
-  );
-  height: var(
-    --swiper-pagination-bullet-height,
-    var(--swiper-pagination-bullet-size, 18px)
-  );
-  display: inline-block;
-  border-radius: 50%;
-  background: var(--swiper-pagination-bullet-inactive-color, #000);
-  opacity: var(--swiper-pagination-bullet-inactive-opacity, 0.2);
-}
-.swiper-pagination-bullet-active {
-  opacity: var(--swiper-pagination-bullet-opacity, 1);
-  background: linear-gradient(225deg, #f76680 0%, #57007b 100%);
-}
-*/
 
 .swiper-pagination {
   top: -100px;
@@ -131,9 +44,6 @@ button:focus-visible {
 }
 
 .active-slide {
-  /* transform: scale(1.1); */
-  /* transition: transform; */
-  /* border: 1px solid; */
   border-color: linear-gradient(225deg, #f76680 0%, #57007b 100%);
 }
 
@@ -190,21 +100,6 @@ button:disabled {
   /* You can change this to your desired color */
 }
 
-
-
-/* .progress-bar-container {
-  width: 100%;
-  height: 20px;
-  background-color: #ddd;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.progress-bar {
-  height: 100%;
-  background-color: green;
-} */
-
 .swiper-pagination {
   margin-top: 600px;
 }
@@ -213,12 +108,6 @@ button:disabled {
   width: 100%;
 }
 
-/* .swiper-slide-active {
-  border: 1px solid blue;
-  border-radius: 27px !important;
-  border-image: linear-gradient(225deg, #f76680 0%, #57007b 100%);
-  border-image-slice: 1;
-} */
 
 .div-bg {
   background: rgba(250, 250, 250, 1);
@@ -244,7 +133,3 @@ button:disabled {
   color: rgba(160, 174, 192, 1);
 
 }
-
-/* .swiper-button-prev{
-  margin-top: 1000px;
-} */
