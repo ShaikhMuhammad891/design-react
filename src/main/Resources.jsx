@@ -18,7 +18,7 @@ const Resources = () => {
           </p>
         </div>
 
-        <div className=" example flex max-w-[1440px] mx-auto w-full overflow-x-scroll  lg:gap-[60px] md:gap-[40px] sm:gap-[20px] gap-4 lg:mt-[66px] md:mt-[46px] mt-[30px]">
+        <div className=" example flex max-w-[1920px] mx-auto w-full overflow-x-scroll  lg:gap-[60px] md:gap-[40px] sm:gap-[20px] gap-4 lg:mt-[66px] md:mt-[46px] mt-[30px]">
           {data.map((e, i) => {
             return (
               <>
