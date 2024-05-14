@@ -43,7 +43,7 @@ const Trust = () => {
 
   return (
     <>
-      <div className=" relative">
+      <div className=" relative max-w-[1440px] mx-auto">
         <div className=" absolute left-[105px] md:top-[-185px] sm:mt-[-135px] mt-[-120px] z-[-1]">
           <Eclips />
         </div>
@@ -119,7 +119,7 @@ const Trust = () => {
         </div>
       </div>
 
-      <div className=" example bg-[#F7F7FA] py-[60px] relative">
+      <div className=" example bg-[#F7F7FA] py-[60px] relative ">
         <Swiper
           navigation={{
             nextEl: ".swiper-button-next", // Selector for your custom "Next" button
@@ -129,7 +129,7 @@ const Trust = () => {
           modules={[Navigation]}
           spaceBetween={40}
           loop={true}
-          className="mySwiper"
+          className="mySwiper max-w-[1440px] mx-auto"
           ref={swiperRefe}
           slidesPerView={6}
           breakpoints={{
@@ -174,6 +174,7 @@ const Trust = () => {
           <SwiperSlide>
             <img src="/images/Logo-6.png" alt="" />
           </SwiperSlide>
+          
         </Swiper>
       </div>
     </>

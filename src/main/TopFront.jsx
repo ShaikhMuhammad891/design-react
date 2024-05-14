@@ -1,15 +1,37 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 // import { ComputerGuy, Eclips } from "../assets/Logos";
 import StartedButton from "../components/StartedButton";
 import { Eclips } from "../assets/Logos";
 
 const TopFront = () => {
+  function myName(name) {
+    console.log("my name is " + name);
+  }
+  myName("Shaikh Muhammad");
+  const [count, setCount] = useState(0);
+  const prevCountRef = useRef();
+  const prevCountRef2 = useRef();
+
+  useEffect(() => {
+    setTimeout(() => {
+      setCount((count) => count + 1);
+    }, 1000);
+    prevCountRef.current = count;
+  });
+
+
+
   return (
     <>
-      <div className=" relative">
+      <div className=" relative max-w-[1440px] mx-auto">
         <div className=" md:mt-[69px] sm:mt-[50px] md:ml-[104px] sm:ml-[77px] sm:flex ml-4 ">
           <div className=" xl:max-w-[531px] xl:w-full xl:my-[103px] lg:max-w-[450px] w-full lg:my-[80px] md:max-w-[300px] md:my-[50px] sm:max-w-[280px] max-w-[300px] sm:my-[40px] my-[30px]">
             <div>
+              {/* <p ref={prevCountRef2}>Current count: {count}</p>
+              <p>
+                Previous count: {prevCountRef.current !== undefined ? prevCountRef.current : "N/A"}
+              </p> */}
+              {/* <button onClick={clickHere}>change focus</button> */}
               <p className=" xl:text-[53px] lg:text-[34px] md:text-[25px] text-[23px] font-[300] xl:leading-[71px] lg:leading-[51px] md:leading-[40px] sm:leading-[30px] leading-[25px] font-inter">
                 Great <span className=" text-[#ae387e]">software</span> is
               </p>

@@ -4,7 +4,7 @@ import { Line } from "../assets/Logos";
 const Approach = () => {
   return (
     <>
-      <div className="container mx-auto bg-[#F7F7FA] border-y border-[#E7DAED] mt-[100px]">
+      <div className=" bg-[#F7F7FA] border-y border-[#E7DAED] mt-[100px]">
         <div className=" ">
           <div className=" flex justify-center md:mt-[71px] sm:mt-[60px] mt-[40px]">
             <Line />

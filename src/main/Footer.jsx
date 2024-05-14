@@ -3,8 +3,8 @@ import React from "react";
 const Footer = () => {
   return (
     <>
-      <div className=" md:mt-[133px] dm:mt-[100px] mt-[80px]">
-        <div className=" max-w-[1230px] mx-auto md:flex grid grid-cols-2 relative pb-[81px] border-b border-[#CBD5E0] px-2 ">
+      <div className=" md:mt-[133px] dm:mt-[100px] mt-[80px] border-b border-[#CBD5E0]">
+        <div className=" max-w-[1230px] mx-auto md:flex grid grid-cols-2 relative pb-[81px]  px-2 ">
           <div className=" max-w-[372px]">
             <div>
               <img src="/images/main-logo.png" alt="" />
@@ -68,10 +68,10 @@ const Footer = () => {
             })}
           </div>
         </div>
+      </div>
         <p className=" text-center text-[14px] leading-[10px] font-inter font-[400] text-[#4A5568] mt-[35px] pb-[42px] tracking-tighter">
           © 2023 Copyright by Agency Solutions. All rights reserved.
         </p>
-      </div>
     </>
   );
 };

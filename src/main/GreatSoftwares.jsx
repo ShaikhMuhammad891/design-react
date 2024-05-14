@@ -15,7 +15,7 @@ import { Description } from "@mui/icons-material";
 const GreatSoftwares = () => {
   return (
     <>
-      <div className="container lg:mt-[80px] md:mt-[60px] sm:mt-[40px] mt-[40px] max-w-[1440px]">
+      <div className="container lg:mt-[80px] md:mt-[60px] sm:mt-[40px] mt-[40px] max-w-[1440px] mx-auto">
         <div className="">
           <div className=" flex justify-center">
             <Line />

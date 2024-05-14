@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <>
       <header
-        className={`header sm:px-[25px] px-2 bg-[#FFFFFF]  md:flex justify-between items-center ${
+        className={`header sm:px-[25px] px-2 bg-[#FFFFFF]  md:flex justify-between items-center max-w-[1440px] mx-auto ${
           !showNav ? "flex" : ""
         }`}
       >

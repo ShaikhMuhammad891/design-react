@@ -16,7 +16,7 @@ import Test from "./Test";
 const LandingPage = () => {
   return (
     <>
-      <div className=" mx-auto max-w-[1440px]">
+      <div className="">
         <TopFront />
         <Services />
         {/* <Test /> */}

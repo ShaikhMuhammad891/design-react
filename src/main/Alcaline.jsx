@@ -5,7 +5,7 @@ import "./Services.css";
 const Alcline = () => {
   return (
     <>
-      <div className=" mt-[90px] border-t border-[#E7DAED]">
+      <div className=" mt-[90px] border-t border-[#E7DAED] max-w-[1440px] mx-auto">
         <div className=" md:mt-[93px] sm:mt-[60px] mt-[40px]">
           <div className=" flex justify-center">
             <Line />
@@ -42,7 +42,7 @@ const Alcline = () => {
           })}
         </div>
 
-        <div className=" xl:max-w-[1230px] xl:ml-[170px] mt-[15px] lg:max-w-[1000px] mb:hidden xl:block">
+        <div className=" xl:max-w-[1230px] xl:ml-[170px] mt-[15px] lg:max-w-[1000px] mb:hidden xl:block mx-auto">
           <img src="/images/trophy.png" alt="" />
         </div>
 
