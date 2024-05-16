@@ -1,10 +1,12 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { Line } from "../assets/Logos";
 import Button from "../components/Button";
 
 const SendEmail = () => {
   const form = useRef();
+  const [feedbackMessage, setFeedbackMessage] = useState("");
+  const [isSending, setIsSending] = useState(false);
 
   useEffect(() => {
     const messageTextarea = form.current.querySelector("#message");
@@ -26,6 +28,8 @@ const SendEmail = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setIsSending(true);
+    setFeedbackMessage("");
 
     emailjs
       .sendForm("service_wkgmtch", "template_exq6yr8", form.current, {
@@ -33,31 +37,34 @@ const SendEmail = () => {
       })
       .then(
         () => {
-          console.log("SUCCESS!");
+          setFeedbackMessage("Message sent successfully!");
+          form.current.reset(); // Reset form fields
         },
         (error) => {
-          console.log("FAILED...", error.text);
+          setFeedbackMessage("Failed to send message. Please try again.");
         }
-      );
+      )
+      .finally(() => {
+        setIsSending(false);
+        setTimeout(() => {
+          setFeedbackMessage(""); // Clear feedback message after 3 seconds
+        }, 3000);
+      });
   };
 
   return (
     <>
-      <div className=" max-w-[1440px] mx-auto mt-[80px]">
-        <div className=" flex justify-center items-center">
+      <div className="max-w-[1440px] mx-auto mt-[80px]">
+        <div className="flex justify-center items-center">
           <Line />
         </div>
-        <p className=" text-top text-center md:text-[35px] sm:text-[30px] text-[25px] font-inter font-[400] mt-[20px] leading-[55px]">
-          Want to <br /> <span className=" font-[700]">tell us something</span>
+        <p className="text-top text-center md:text-[35px] sm:text-[30px] text-[25px] font-inter font-[400] mt-[20px] leading-[55px]">
+          Want to <br /> <span className="font-[700]">tell us something</span>
         </p>
 
-        <div className=" max-w-[1280px] w-full mx-auto flex justify-between md:mt-[50px] sm:mt-[35px] mt-[25px] px-4">
-          <form
-            ref={form}
-            onSubmit={sendEmail}
-            className=" max-w-[550px]"
-          >
-            <label className=" text-top mt-10 block sm:text-[25px] text-[20px] font-inter font-[400] leading-[45px]">
+        <div className="max-w-[1280px] w-full mx-auto flex justify-between md:mt-[50px] sm:mt-[35px] mt-[25px] px-4">
+          <form ref={form} onSubmit={sendEmail} className="max-w-[550px]">
+            <label className="text-top mt-10 block sm:text-[25px] text-[20px] font-inter font-[400] leading-[45px]">
               Email
             </label>{" "}
             <br />
@@ -66,10 +73,10 @@ const SendEmail = () => {
               required
               name="user_email"
               placeholder="Write your email"
-              className=" border-b  outline-none sm:w-[550px] w-[300px] border-[#57007b] sm:text-[18px] text-[16px] font-inter font-[400] leading-8"
+              className="border-b outline-none sm:w-[550px] w-[300px] border-[#57007b] sm:text-[18px] text-[16px] font-inter font-[400] leading-8"
             />
             <br />
-            <label className=" text-top mt-10 block text-[25px] font-inter font-[400] leading-[45px] ">
+            <label className="text-top mt-10 block sm:text-[25px] text-[20px] font-inter font-[400] leading-[45px] ">
               Message
             </label>
             <br />
@@ -79,15 +86,13 @@ const SendEmail = () => {
               id="message"
               rows={1}
               placeholder=" Write on your thoughts"
-              className=" outline-none border-b sm:w-[550px] w-[300px] border-[#57007b] sm:text-[18px] text-[16px] font-inter font-[400] leading-8"
+              className="outline-none border-b sm:w-[550px] w-[300px] border-[#57007b] sm:text-[18px] text-[16px] font-inter font-[400] leading-8"
               style={{ resize: "none" }}
             />
             <br />
-            <Button type="submit" mt="20px" text="Send" />
+            <Button type="submit" mt="20px" text="Send" disabled={isSending} />
+            {feedbackMessage && <p className=" font-inter font-[400] text-[14px] mt-4">{feedbackMessage}</p>}
           </form>
-          {/* <div className=" max-w-[560px]">
-            <img src="/images/email.png" alt="" />
-          </div> */}
         </div>
       </div>
     </>
