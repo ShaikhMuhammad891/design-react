@@ -22,7 +22,7 @@ const Resources = () => {
           {data.map((e, i) => {
             return (
               <>
-                <div className="md:min-w-[254px] min-w-[220px]">
+                <div key={i} className="md:min-w-[254px] min-w-[220px]">
                   <div>
                     <img
                       src={e.image}

@@ -61,7 +61,7 @@ const Header = () => {
               showNav ? " block ml-[8px]" : " hidden md:block "
             }`}
           >
-            <Button />
+            <Button text="Contact us" />
           </div>
         </header>
       </div>

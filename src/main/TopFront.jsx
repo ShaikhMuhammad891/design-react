@@ -12,12 +12,12 @@ const TopFront = () => {
   const prevCountRef = useRef();
   const prevCountRef2 = useRef();
 
-  useEffect(() => {
-    setTimeout(() => {
-      setCount((count) => count + 1);
-    }, 1000);
-    prevCountRef.current = count;
-  });
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setCount((count) => count + 1);
+  //   }, 1000);
+  //   prevCountRef.current = count;
+  // });
 
 
 

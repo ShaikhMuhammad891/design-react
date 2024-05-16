@@ -12,6 +12,7 @@ import Resources from "./Resources";
 import Footer from "./Footer";
 // import SimplePagination from "./SimplePagination";
 import Test from "./Test";
+import SendEmail from "./SendEmail";
 
 const LandingPage = () => {
   return (
@@ -28,7 +29,7 @@ const LandingPage = () => {
         <TechStack />
         <Alcline />
         <Resources />
-        {/* <SimplePagination /> */}
+        <SendEmail />
       </div>
     </>
   );
