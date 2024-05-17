@@ -22,8 +22,8 @@ const Header = () => {
           <div className=" md:hidden">
             <button
               onClick={() => setShowNav(!showNav)}
-              className={`${
-                showNav ? "absolute right-6 top-5 md:hidden" : " md:hidden"
+              className={` fixed right-6 top-2 bg-transparent${
+                showNav ? " md:hidden" : ""
               }`}
             >
               {showNav ? <CloseIcon /> : <MenuIcon />}
@@ -32,7 +32,9 @@ const Header = () => {
 
           <div
             className={` ${
-              showNav ? "block" : " center bg-white hidden md:block "
+              showNav
+                ? "block fixed top-[50px] h-[100vh] bg-white left-0 w-[100%] z-[1] pl-12"
+                : " center bg-white hidden md:block "
             }`}
           >
             <ul className="  xl: md:flex lg:space-x-[48.2px] md:space-x-4 ml-[13px] sm:ml-0">
@@ -55,12 +57,12 @@ const Header = () => {
                 Hire
               </li>
             </ul>
+            <div className=" ml-[-5px]">
+              <Button text="Contact us" />
+            </div>
           </div>
-          <div
-            className={`contact ${
-              showNav ? " block ml-[8px]" : " hidden md:block "
-            }`}
-          >
+
+          <div className="md:block hidden">
             <Button text="Contact us" />
           </div>
         </header>

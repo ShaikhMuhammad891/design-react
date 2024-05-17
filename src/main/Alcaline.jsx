@@ -19,7 +19,7 @@ const Alcline = () => {
             </p>
           </div>
 
-          <div className=" mb:hidden xl:max-w-[1040px] w-full  mx-auto mt-[88px]  lg:grid lg:grid-rows-1 grid-flow-col xl:gap-[71px] lg:gap-[31px] lg:max-w-[750px] ">
+          <div className="hidden xl:max-w-[1040px] w-full  mx-auto mt-[88px]  lg:grid lg:grid-rows-1 grid-flow-col xl:gap-[71px] lg:gap-[31px] lg:max-w-[750px] ">
             {data.map((e, i) => {
               return (
                 <>
@@ -43,11 +43,11 @@ const Alcline = () => {
             })}
           </div>
 
-          <div className=" xl:max-w-[1230px] xl:ml-[170px] mt-[15px] lg:max-w-[1000px] mb:hidden xl:block mx-auto">
+          <div className=" xl:max-w-[1230px] xl:ml-[170px] mt-[15px] lg:max-w-[1000px] hidden xl:block mx-auto">
             <img src="/images/trophy.png" alt="" />
           </div>
 
-          <div className=" mb:hidden lg:grid xl:max-w-[1040px] w-full  mx-auto xl:mt-[15px] lg:mt-[24px] grid grid-rows-1 grid-flow-col xl:gap-[71px] lg:gap-[31px] lg:max-w-[750px] xl:ml-[235px]  ">
+          <div className=" hidden lg:grid xl:max-w-[1040px] w-full  mx-auto xl:mt-[15px] lg:mt-[24px] grid-rows-1 grid-flow-col xl:gap-[71px] lg:gap-[31px] lg:max-w-[750px] xl:ml-[235px]  ">
             {data2.map((e, i) => {
               return (
                 <>
@@ -71,13 +71,13 @@ const Alcline = () => {
             })}
           </div>
 
-          <div className=" lg:hidden grid sm:grid-rows-3 sm:grid-flow-col grid-rows-6 mx-auto max-w-[600px] gap-4">
+          <div className=" lg:hidden grid sm:grid-rows-3 sm:grid-flow-col grid-rows-6 mx-auto max-w-[600px] gap-4 mt-[40px]">
             {dataAll.map((e, i) => {
               return (
                 <>
                   <div>
                     <div className=" xl:max-w-[299px] xl:pt-[22px] xl:pb-[26px] xl:pl-[22px] xl:pr-[26px] border border-[#E7DAED] rounded-[9px] lg:max-w-[230px] lg:pt-[16px] lg:pl-[12px] md:pt-[12px] md:pl-[12px] sm:pl-3 sm:py-4 pl-4 py-4 mx-4 ">
-                      <div className=" flex gap-[10px]">
+                      <div className=" flex gap-[10px] justify-center sm:justify-normal">
                         <p className=" text-color font-inter font-[700] md:text-[18px] sm:text-[16px] leading-[21.78px] text-[#1A202C] tracking-tighter">
                           {e.number}
                         </p>
@@ -85,7 +85,7 @@ const Alcline = () => {
                           {e.title}
                         </p>
                       </div>
-                      <p className=" mt-[15px] tracking-tighter xl:text-[14px]  md:text-[12px] sm:text-[11px] font-inter font-[400] md:leading-[20px] sm:leading-[16px] text-[#718096] max-w-[215px] md:mt-[10px] sm:mt-[10px]">
+                      <p className=" text-center sm:text-start mt-[15px] tracking-tighter xl:text-[14px]  md:text-[12px] sm:text-[11px] font-inter font-[400] md:leading-[20px] sm:leading-[16px] text-[#718096] sm:max-w-[215px] md:mt-[10px] sm:mt-[10px] mr-4 sm:mr-0">
                         {e.description}
                       </p>
                     </div>
