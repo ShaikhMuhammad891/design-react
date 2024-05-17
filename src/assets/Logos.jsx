@@ -80,31 +80,31 @@ export const HeaderLogo = ({ width, height, className }) => {
   );
 };
 
-export const Eclips = () => {
+export const Eclips = (props) => {
   return (
     <>
-      <svg
-        width="72"
-        height="72"
-        viewBox="0 0 72 72"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
+    <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={72}
+    height={72}
+    fill="none"
+    {...props}
+  >
+    <circle cx={36} cy={36} r={36} fill="url(#a)" />
+    <defs>
+      <linearGradient
+        id="a"
+        x1={72}
+        x2={0}
+        y1={0}
+        y2={72}
+        gradientUnits="userSpaceOnUse"
       >
-        <circle cx="36" cy="36" r="36" fill="url(#paint0_linear_200_193)" />
-        <defs>
-          <linearGradient
-            id="paint0_linear_200_193"
-            x1="72"
-            y1="0"
-            x2="0"
-            y2="72"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stop-color="#F76680" />
-            <stop offset="1" stop-color="#57007B" />
-          </linearGradient>
-        </defs>
-      </svg>
+        <stop stopColor="#F76680" />
+        <stop offset={1} stopColor="#57007B" />
+      </linearGradient>
+    </defs>
+  </svg>
     </>
   );
 };
@@ -224,125 +224,125 @@ export const Smartpath = () => {
   );
 };
 
-export const QuoteStart = () => {
+export const QuoteStart = (props) => {
   return (
     <>
       <svg
-        width="15"
-        height="24"
-        viewBox="0 0 15 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
+    xmlns="http://www.w3.org/2000/svg"
+    width={15}
+    height={24}
+    fill="none"
+    {...props}
+  >
+    <path
+      fill="url(#a)"
+      d="M3.133 12.038A6.667 6.667 0 1 0 .877 6.232c-.594 3.016-.587 6.611.773 9.833 1.437 3.4 4.335 6.267 9.283 7.562a1.25 1.25 0 1 0 .634-2.419c-4.219-1.105-6.487-3.45-7.614-6.116a12.04 12.04 0 0 1-.82-3.054Z"
+    />
+    <defs>
+      <linearGradient
+        id="a"
+        x1={0.501}
+        x2={20.853}
+        y1={0.333}
+        y2={12.25}
+        gradientUnits="userSpaceOnUse"
       >
-        <path
-          d="M3.13332 12.0384C4.25861 13.0134 5.67791 13.5836 7.16498 13.6582C8.65204 13.7328 10.1213 13.3074 11.3385 12.4499C12.5557 11.5924 13.4508 10.352 13.8811 8.92664C14.3114 7.50124 14.2522 5.97281 13.7128 4.585C13.1735 3.19718 12.185 2.02986 10.9051 1.26912C9.62519 0.508373 8.12744 0.197994 6.65061 0.387453C5.17377 0.576913 3.80287 1.25531 2.75642 2.3145C1.70997 3.37369 1.04822 4.7527 0.876649 6.23172C0.283316 9.24839 0.289982 12.8434 1.64998 16.0651C3.08665 19.4651 5.98498 22.3317 10.9333 23.6267C11.0927 23.6701 11.259 23.6814 11.4228 23.6601C11.5865 23.6387 11.7445 23.5852 11.8874 23.5025C12.0303 23.4198 12.1555 23.3095 12.2556 23.1782C12.3557 23.0468 12.4287 22.897 12.4706 22.7372C12.5124 22.5775 12.5222 22.411 12.4993 22.2474C12.4764 22.0839 12.4214 21.9265 12.3373 21.7843C12.2533 21.6422 12.1419 21.5181 12.0096 21.4192C11.8773 21.3204 11.7268 21.2487 11.5666 21.2084C7.34831 20.1034 5.07998 17.7584 3.95331 15.0917C3.54696 14.1144 3.27125 13.0878 3.13332 12.0384Z"
-          fill="url(#paint0_linear_218_253)"
-        />
-        <defs>
-          <linearGradient
-            id="paint0_linear_218_253"
-            x1="0.500818"
-            y1="0.333252"
-            x2="20.8527"
-            y2="12.25"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stop-color="#F76680" />
-            <stop offset="1" stop-color="#57007B" />
-          </linearGradient>
-        </defs>
-      </svg>
+        <stop stopColor="#F76680" />
+        <stop offset={1} stopColor="#57007B" />
+      </linearGradient>
+    </defs>
+  </svg>
     </>
   );
 };
 
-export const QuoteEnd = () => (
+export const QuoteEnd = (props) => (
   <>
-    <svg
-      width="15"
-      height="24"
-      viewBox="0 0 15 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M11.8667 12.0384C10.7414 13.0134 9.32208 13.5836 7.83501 13.6582C6.34794 13.7328 4.87871 13.3074 3.66151 12.4499C2.44431 11.5924 1.54921 10.352 1.1189 8.92664C0.688586 7.50124 0.747827 5.97281 1.28718 4.585C1.82653 3.19718 2.81495 2.02986 4.09487 1.26912C5.37479 0.508373 6.87255 0.197994 8.34938 0.387453C9.82621 0.576913 11.1971 1.25531 12.2436 2.3145C13.29 3.37369 13.9518 4.7527 14.1233 6.23172C14.7167 9.24838 14.71 12.8434 13.35 16.0651C11.9133 19.4651 9.015 22.3317 4.06667 23.6267C3.90732 23.6701 3.74095 23.6814 3.5772 23.6601C3.41344 23.6387 3.25553 23.5852 3.11259 23.5025C2.96965 23.4198 2.84452 23.3095 2.74443 23.1782C2.64433 23.0468 2.57125 22.897 2.52941 22.7372C2.48757 22.5775 2.47781 22.411 2.50067 22.2474C2.52354 22.0839 2.57859 21.9265 2.66264 21.7843C2.74669 21.6422 2.85807 21.5181 2.99035 21.4192C3.12264 21.3204 3.2732 21.2487 3.43334 21.2084C7.65167 20.1034 9.92 17.7584 11.0467 15.0917C11.453 14.1144 11.7287 13.0878 11.8667 12.0384Z"
-        fill="url(#paint0_linear_218_250)"
-      />
-      <defs>
-        <linearGradient
-          id="paint0_linear_218_250"
-          x1="14.4992"
-          y1="0.333252"
-          x2="-5.85271"
-          y2="12.25"
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop stop-color="#F76680" />
-          <stop offset="1" stop-color="#57007B" />
-        </linearGradient>
-      </defs>
-    </svg>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={15}
+    height={24}
+    fill="none"
+    {...props}
+  >
+    <path
+      fill="url(#a)"
+      d="M11.867 12.038a6.667 6.667 0 1 1 2.256-5.806c.594 3.016.587 6.611-.773 9.833-1.437 3.4-4.335 6.267-9.283 7.562a1.25 1.25 0 1 1-.634-2.419c4.219-1.105 6.487-3.45 7.614-6.116.406-.978.682-2.004.82-3.054Z"
+    />
+    <defs>
+      <linearGradient
+        id="a"
+        x1={14.499}
+        x2={-5.853}
+        y1={0.333}
+        y2={12.25}
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#F76680" />
+        <stop offset={1} stopColor="#57007B" />
+      </linearGradient>
+    </defs>
+  </svg>
   </>
 );
 
-export const ReadMore = () => {
+export const ReadMore = (props) => {
   return (
     <>
-      <svg
-        width="9"
-        height="15"
-        viewBox="0 0 9 15"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
+       <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={9}
+    height={15}
+    fill="none"
+    {...props}
+  >
+    <path
+      fill="url(#a)"
+      d="M5.819 7.5.249 1.93 1.842.341 9 7.5l-7.16 7.16-1.59-1.591 5.569-5.57Z"
+    />
+    <defs>
+      <linearGradient
+        id="a"
+        x1={9}
+        x2={-3.742}
+        y1={0.34}
+        y2={8.127}
+        gradientUnits="userSpaceOnUse"
       >
-        <path
-          d="M5.81851 7.49983L0.249756 1.93108L1.84051 0.340332L9.00001 7.49983L1.84051 14.6593L0.249756 13.0686L5.81851 7.49983Z"
-          fill="url(#paint0_linear_296_462)"
-        />
-        <defs>
-          <linearGradient
-            id="paint0_linear_296_462"
-            x1="9.00001"
-            y1="0.340332"
-            x2="-3.74213"
-            y2="8.12697"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stop-color="#F76680" />
-            <stop offset="1" stop-color="#57007B" />
-          </linearGradient>
-        </defs>
-      </svg>
+        <stop stopColor="#F76680" />
+        <stop offset={1} stopColor="#57007B" />
+      </linearGradient>
+    </defs>
+  </svg>
     </>
   );
 };
 
-export const VerticalLine = () => {
+export const VerticalLine = (props) => {
   return (
     <>
-      <svg
-        width="3"
-        height="87"
-        viewBox="0 0 3 87"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
+    <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={3}
+    height={87}
+    fill="none"
+    {...props}
+  >
+    <path fill="url(#a)" d="M0 0h3v87H0z" />
+    <defs>
+      <linearGradient
+        id="a"
+        x1={3}
+        x2={-2.993}
+        y1={0}
+        y2={0.207}
+        gradientUnits="userSpaceOnUse"
       >
-        <rect width="3" height="87" fill="url(#paint0_linear_300_484)" />
-        <defs>
-          <linearGradient
-            id="paint0_linear_300_484"
-            x1="3"
-            y1="0"
-            x2="-2.99287"
-            y2="0.206651"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stop-color="#F76680" />
-            <stop offset="1" stop-color="#57007B" />
-          </linearGradient>
-        </defs>
-      </svg>
+        <stop stopColor="#F76680" />
+        <stop offset={1} stopColor="#57007B" />
+      </linearGradient>
+    </defs>
+  </svg>
     </>
   );
 };

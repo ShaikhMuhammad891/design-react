@@ -59,19 +59,17 @@ const Footer = () => {
           <div className=" flex  max-w-[184px] sm:ml-[70px] ml-[25px] items-end">
             {data.map((e, i) => {
               return (
-                <>
-                  <div className="">
-                    <img src={e.logo} alt="" className=" w-[200px]" />
-                  </div>
-                </>
+                <div key={i} className="">
+                  <img src={e.logo} alt="" className=" w-[200px]" />
+                </div>
               );
             })}
           </div>
         </div>
       </div>
-        <p className=" text-center text-[14px] leading-[10px] font-inter font-[400] text-[#4A5568] mt-[35px] pb-[42px] tracking-tighter">
-          © 2023 Copyright by Agency Solutions. All rights reserved.
-        </p>
+      <p className=" text-center text-[14px] leading-[10px] font-inter font-[400] text-[#4A5568] mt-[35px] pb-[42px] tracking-tighter">
+        © 2023 Copyright by Agency Solutions. All rights reserved.
+      </p>
     </>
   );
 };

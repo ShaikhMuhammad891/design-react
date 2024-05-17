@@ -13,6 +13,7 @@ import Footer from "./Footer";
 // import SimplePagination from "./SimplePagination";
 import Test from "./Test";
 import SendEmail from "./SendEmail";
+import MainSwiper from "./MainSwiper";
 
 const LandingPage = () => {
   return (
@@ -20,6 +21,7 @@ const LandingPage = () => {
       <div className="">
         <TopFront />
         <Services />
+        {/* <MainSwiper /> */}
         {/* <Test /> */}
         <Trust />
         <Customer />

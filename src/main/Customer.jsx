@@ -138,10 +138,8 @@ const Customer = () => {
             }}
           >
             {data.map((e, i) => (
-              <>
-                <SwiperSlide className=" mx-auto">
+                <SwiperSlide key={i} className=" mx-auto">
                   <div
-                    key={i}
                     className={`${
                       activeIndex === i
                         ? " opacity-100 transform scale-110  "
@@ -186,7 +184,6 @@ const Customer = () => {
                     </p>
                   </div>
                 </SwiperSlide>
-              </>
             ))}
           </Swiper>
         </div>

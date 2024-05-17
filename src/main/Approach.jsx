@@ -21,8 +21,7 @@ const Approach = () => {
         <div className="grid xl:grid-rows-3 grid-flow-col gap-[25px] md:mt-[80px] sm:mt-[60px] mt-[40px] xl:max-w-[1233px] mb-[98px] grid-rows-6 lg:max-w-[610px] mx-auto md:grid-rows-6 md:max-w-[550px] ">
           {data.map((e, i) => {
             return (
-              <>
-                <div className=" lg:max-w-[550px] m-2 lg:w-full flex border border-[#E7DAED] pt-[39px] sm:pl-[14px] pl-2 bg-[#FAFAFA] pb-[58px] ">
+                <div key={i} className=" lg:max-w-[550px] m-2 lg:w-full flex border border-[#E7DAED] pt-[39px] sm:pl-[14px] pl-2 bg-[#FAFAFA] pb-[58px] ">
                   <div
                     style={{ background: e.bg }}
                     className={` w-[59px] h-[56px] px-[10px] py-[10px] rounded-lg`}
@@ -38,7 +37,6 @@ const Approach = () => {
                     </p>
                   </div>
                 </div>
-              </>
             );
           })}
         </div>

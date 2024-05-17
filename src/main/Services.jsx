@@ -36,6 +36,7 @@ const Services = () => {
           centeredSlides={true}
           loop={true}
           slidesPerView="auto"
+          // createElements = {true}
           // spaceBetween={40}
           breakpoints={{
             375: {
@@ -68,7 +69,7 @@ const Services = () => {
             clickable: true,
             type: "bullets",
           }}
-          modules={[EffectCoverflow, Pagination, EffectFlip, Navigation]}
+          modules={[Pagination, Navigation]}
           className="mySwiper xxl:max-w-[1920px] xl:max-w-[1250px] lg:max-w-[990px] md:max-w-[768px] sm:max-w-[316px] w-full h-auto lg:mt-[63px] max-w-[350px] "
         >
           {data.map((element, index) => (
@@ -134,6 +135,31 @@ const data = [
   {
     title: "Web Design & Development",
     img: "/images/code.png",
+    description:
+      "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
+  },
+
+  {
+    title: "Software Testing Services",
+    img: "/images/mobile-logo.png",
+    description:
+      "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
+  },
+  {
+    title: "Software Testing Services",
+    img: "/images/mobile-logo.png",
+    description:
+      "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
+  },
+  {
+    title: "Mobile App Development",
+    img: "/images/dashboard.png",
+    description:
+      "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
+  },
+  {
+    title: "Mobile App Development",
+    img: "/images/dashboard.png",
     description:
       "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
   },

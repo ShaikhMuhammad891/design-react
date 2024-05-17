@@ -21,31 +21,29 @@ const Resources = () => {
         <div className=" example flex max-w-[1920px] mx-auto w-full overflow-x-scroll  lg:gap-[60px] md:gap-[40px] sm:gap-[20px] gap-4 lg:mt-[66px] md:mt-[46px] mt-[30px]">
           {data.map((e, i) => {
             return (
-              <>
-                <div key={i} className="md:min-w-[254px] min-w-[220px]">
+              <div key={i} className="md:min-w-[254px] min-w-[220px]">
+                <div>
+                  <img
+                    src={e.image}
+                    alt=""
+                    className=" md:min-w-[254px] md:max-h-[175px] min-w-[220px] max-h-[160px]"
+                  />
+                </div>
+                <p className=" text-[#2D3748] md:text-[16px] mb:text-[14px]  font-inter md:font-[500] sm:font-[400] md:leading-[25px] sm:leading-[20px] mt-[20px]">
+                  {e.description}
+                </p>
+
+                <div className=" flex justify-end gap-[19px] items-center mt-[20px]">
+                  <p className=" text-[#57007B] md:text-[16px] sm:text-[14px] font-inter font-[500] leading-[25px]">
+                    Read more
+                  </p>
                   <div>
-                    <img
-                      src={e.image}
-                      alt=""
-                      className=" md:min-w-[254px] md:max-h-[175px] min-w-[220px] max-h-[160px]"
+                    <PurpleLogo
+                      className={` sm:w-[12px] h-[12px] md:w-[17px] md:h-[17px]`}
                     />
                   </div>
-                  <p className=" text-[#2D3748] md:text-[16px] mb:text-[14px]  font-inter md:font-[500] sm:font-[400] md:leading-[25px] sm:leading-[20px] mt-[20px]">
-                    {e.description}
-                  </p>
-
-                  <div className=" flex justify-end gap-[19px] items-center mt-[20px]">
-                    <p className=" text-[#57007B] md:text-[16px] sm:text-[14px] font-inter font-[500] leading-[25px]">
-                      Read more
-                    </p>
-                    <div>
-                      <PurpleLogo
-                        className={` sm:w-[12px] h-[12px] md:w-[17px] md:h-[17px]`}
-                      />
-                    </div>
-                  </div>
                 </div>
-              </>
+              </div>
             );
           })}
         </div>
