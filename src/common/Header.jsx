@@ -33,7 +33,7 @@ const Header = () => {
           <div
             className={` ${
               showNav
-                ? "block fixed top-[50px] h-[100vh] bg-white left-0 w-[100%] z-[1] pl-12"
+                ? "block fixed top-[50px] h-[100vh] bg-white left-0 w-[100%] z-[1] pl-[4%] sm:pl-[7%]"
                 : " center bg-white hidden md:block "
             }`}
           >
