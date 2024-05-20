@@ -36,6 +36,7 @@ const Services = () => {
           centeredSlides={true}
           loop={true}
           slidesPerView="auto"
+
           // createElements = {true}
           // spaceBetween={40}
           breakpoints={{

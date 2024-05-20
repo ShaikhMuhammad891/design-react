@@ -113,14 +113,14 @@ const CaseStudies = () => {
           </div>
         </div>
 
-        <div className=" flex justify-end items-center gap-2 sm:mt-[60px] mt-[40px] p-2 xl:w-[1240px] mx-auto lg:max-w-[920px] md:max-w-[700px]">
+        <button className=" flex justify-end items-center gap-2 sm:mt-[60px] mt-[40px] p-2 xl:w-[1240px] mx-auto lg:max-w-[920px] md:max-w-[700px]">
           <p className=" text-color font-inter sm:text-[20px] text-[15px] font-[600] leading-[27.3px]">
             Read more
           </p>
           <div className=" mt-[3px]">
             <ReadMore />
           </div>
-        </div>
+        </button>
       </div>
     </>
   );

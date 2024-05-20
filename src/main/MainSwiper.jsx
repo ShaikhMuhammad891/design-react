@@ -1,84 +1,46 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState } from 'react';
 // Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
+import 'swiper/css';
+import 'swiper/css/pagination';
+
 
 // import required modules
-import { Pagination } from "swiper/modules";
-const MainSwiper = () => {
+import { Pagination } from 'swiper/modules';
+
+export default function MainSwiper() {
+  const pagination = {
+    clickable: true,
+    renderBullet: function (index, className) {
+      console.log("it is classname : " + className)
+      return '<span class="' + className + '">'  + (index + 2) + '</span>';
+    },
+  };
+
   return (
     <>
-      <div className=" max-w-[1440px] mx-auto over-the-top w-full bg-gray-300">
-        <Swiper
-          slidesPerView={4}
-          spaceBetween={30}
-          loop={true}
-          centeredSlides={true}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[Pagination]}
-          className="mySwiper h-[50vh] bg-green-500 p-0"
-        >
-         <div className=" w-[1440px] bg-blue-500 mt-10">
-         {data.map((e, i) => {
-            return (
-              <>
-                <div className=" w-[180px]">
-                  <SwiperSlide
-                    key={i}
-                    className=" bg-gray-400 h-[300px] mt-[40px] "
-                  >
-                    <img src={e.img} alt="" />
-                    <p>{i}</p>
-                    <p>{e.title}</p>
-                  </SwiperSlide>
-                </div>
-              </>
-            );
-          })}
-         </div>
-        </Swiper>
-      </div>
+      <Swiper
+        pagination={pagination}
+        modules={[Pagination]}
+        spaceBetween={40}
+        slidesPerView={4}
+        centeredSlides = {true}
+        loop = {true}
+        // loopAdditionalSlides={4}
+        className="mySwiper h-[50vh] w-[80vh] z-[1] bg-green-500 text-center"
+      >
+        <SwiperSlide className=' bg-slate-600 w-[120px]'>Slide 1</SwiperSlide>
+        <SwiperSlide className=' bg-slate-600 w-[120px]'>Slide 2</SwiperSlide>
+        <SwiperSlide className=' bg-slate-600 w-[120px]'>Slide 3</SwiperSlide>
+        <SwiperSlide className=' bg-slate-600 w-[120px]'>Slide 4</SwiperSlide>
+        <SwiperSlide className=' bg-slate-600 w-[120px]'>Slide 5</SwiperSlide>
+        <SwiperSlide className=' bg-slate-600 w-[120px]'>Slide 6</SwiperSlide>
+        <SwiperSlide className=' bg-slate-600 w-[120px]'>Slide 7</SwiperSlide>
+        <SwiperSlide className=' bg-slate-600 w-[120px]'>Slide 8</SwiperSlide>
+        <SwiperSlide className=' bg-slate-600 w-[120px]'>Slide 9</SwiperSlide>
+      </Swiper>
     </>
   );
-};
-
-export default MainSwiper;
-
-const data = [
-  {
-    title: "Web Design & Development",
-    img: "/images/code.png",
-    description:
-      "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
-  },
-
-  {
-    title: "Software Testing Services",
-    img: "/images/mobile-logo.png",
-    description:
-      "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
-  },
-  {
-    title: "Software Testing Services",
-    img: "/images/mobile-logo.png",
-    description:
-      "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
-  },
-  {
-    title: "Mobile App Development",
-    img: "/images/dashboard.png",
-    description:
-      "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
-  },
-  {
-    title: "Mobile App Development",
-    img: "/images/dashboard.png",
-    description:
-      "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
-  },
-];
+}

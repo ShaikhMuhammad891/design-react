@@ -71,13 +71,13 @@ const Resources = () => {
               Hire the best developers and designers around!
             </p>
 
-            <div>
+            <div className="">
               <p
                 style={{
                   background:
                     "linear-gradient(225deg, #FFC656 0%, #F16063 100%)",
                 }}
-                className=" lg:px-[43px] lg:py-[17.5px] md:px-[33px] md:py-[14.5px] sm:py-[12px] sm:px-[20px] py-2 px-3 text-[8px]  font-inter md:font-[700] sm:font-[500] md:text-[12px]  text-[#FAFAFA] tracking-tighter lg:leading-[21.78px] md:leading-[15px]"
+                className=" cursor-pointer lg:px-[43px] lg:py-[17.5px] md:px-[33px] md:py-[14.5px] sm:py-[12px] sm:px-[20px] py-2 px-3 text-[8px]  font-inter md:font-[700] sm:font-[500] md:text-[12px]  text-[#FAFAFA] tracking-tighter lg:leading-[21.78px] md:leading-[15px]"
               >
                 Hire Top Developers
               </p>
